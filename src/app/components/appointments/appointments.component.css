@@ -1,0 +1,52 @@
+.main {
+    border: 3px outset #4DA6DA;  
+}
+
+
+tr {
+  color: darkblue;
+  text-transform: uppercase;
+  border: 2px outset #4DA6DA;
+  text-align: left;
+  border-radius: round;
+}
+
+.header {
+    color: darkblue;
+    font: bold 16px arial, helvetica, sans-serif;
+    text-align: center;
+}
+
+.center{
+    width:400px;
+    margin:auto;
+    text-align:center;
+    color: darkblue;
+    font: bold 18px arial, helvetica, sans-serif;
+    background: #f0ffff;
+    border: 2px outset darkblue;
+}
+input
+{
+background: #FAFAFA;
+border: 2px solid darkblue;
+text-align: left;
+}
+
+.submit input
+{
+color: #000;
+background: darkblue;
+border: 2px outset #d7b9c9
+}
+
+button {
+    color: #fff;
+    background:#4DA6DA;
+    border: 2px outset #d7b9c9;
+    margin-left: 3.5em;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    transition: .5s ease;
+    left: 49%;
+}

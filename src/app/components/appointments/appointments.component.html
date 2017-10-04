@@ -1,15 +1,48 @@
+
+<br>
+<br>
 <br>
 
-<div>
-<form #appointmentForm="ngForm" (ngSubmit)="onSubmit(appointmentForm)" novalidate>
-First Name: <input name="first" ngModel required #first="ngModel"><br>
-Last Name: <input name="last" ngModel required last="true"><br>
-Email:  <input type = "email" name="email" ngModel required email="true"><br>
-Company:  <input name="company" ngModel required company="true"><br>
-Person to Visit: <input name="toVisit" ngModel required toVisit="true"><br>
+<div class = "center">
+<br>
 
-<button> Submit </button>
+<header><b> Please fill in your details below </b></header>
+<form #appointmentForm="ngForm" (ngSubmit)="onSubmit(appointmentForm)" novalidate>
+        <table style="width:100%">
+
+<br>
+<tr>
+    <td><label>First Name: </label>  </td>
+    <td><input class= "table" name="first" ngModel required #first="ngModel"></td> 
+    
+</tr>
+<tr>
+    <td><label>Last Name:</label> </td>
+    <td><input class= "table" name="last" ngModel required last="true"></td> 
+</tr>
+    
+    
+<tr>
+    <td><label>Email: </label> </td>
+    <td><input class= "table" type = "email" name="email" ngModel required email="true"></td> 
+</tr>
+
+<tr>     
+<td> <label>Company: </label></td>
+<td><input class= "table" name="company" ngModel required company="true"></td> 
+    </tr>
+
+    <tr>
+        <td><label>Person to Visit:</label></td>
+        <td><input name="toVisit" ngModel required toVisit="true"></td> 
+        </tr>
+<br>
+<br>
+        
+        
+    </table>
+
+    <button> <b>Submit </b></button>
+    <br><br>
 </form>
 </div>
-
-
