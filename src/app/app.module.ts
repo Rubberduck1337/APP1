@@ -8,6 +8,8 @@ import { AppointmentsComponent } from './components/appointments/appointments.co
 import { DeliveryComponent } from './components/delivery/delivery.component';
 import { OtherComponent } from './components/other/other.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RedirectComponent } from './components/redirect/redirect.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { FormsModule } from '@angular/forms';
     WelcomeComponent,
     AppointmentsComponent,
     DeliveryComponent,
-    OtherComponent
+    OtherComponent,
+    RedirectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

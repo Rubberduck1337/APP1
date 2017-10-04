@@ -1,7 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 
+<div class="centered">
+    <button type="button" [routerLink]="'/welcome'" class="large blue button">Welcome</button>  
+    <button type="button" [routerLink]="'/appointments'" class="large blue button">Appointment</button>
+    <button type="button" [routerLink]="'/delivery'" class="large blue button">Delivery</button>
+    <button type="button" [routerLink]="'/other'" class="large blue button">Other</button>
+</div>
 
+<div class="centered">
+    <router-outlet></router-outlet>  
+</div>
 
-<app-welcome></app-welcome>
+<!-- <app-welcome></app-welcome> -->
 
