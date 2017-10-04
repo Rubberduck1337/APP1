@@ -1,0 +1,15 @@
+<br>
+
+<div>
+<form #appointmentForm="ngForm" (ngSubmit)="onSubmit(appointmentForm)" novalidate>
+First Name: <input name="first" ngModel required #first="ngModel"><br>
+Last Name: <input name="last" ngModel required last="true"><br>
+Email:  <input type = "email" name="email" ngModel required email="true"><br>
+Company:  <input name="company" ngModel required company="true"><br>
+Person to Visit: <input name="toVisit" ngModel required toVisit="true"><br>
+
+<button> Submit </button>
+</form>
+</div>
+
+

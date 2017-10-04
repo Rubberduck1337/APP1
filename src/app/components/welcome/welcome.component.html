@@ -1,0 +1,23 @@
+<div class="centered">
+<h1> {{ stringWelcome }} </h1>
+  <br><br>
+  
+
+  <button type="button" (click)=clickAppointment() class="large blue button">Appointment</button>
+  <button type="button" (click)=clickDelivery() class="large blue button">Delivery</button>
+  <button type="button" (click)=clickOther() class="large blue button">Other</button>
+  
+  <ng-container *ngIf="thingy == 'appointment'">
+      <app-appointments></app-appointments>
+    </ng-container>
+    
+    <ng-container *ngIf="thingy == 'delivery'">
+    <app-delivery></app-delivery>
+    </ng-container>
+    
+    <ng-container *ngIf="thingy == 'other'">
+      <app-other></app-other>
+    </ng-container>
+    
+    <router-outlet></router-outlet>
+    
