@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Visit } from '../../visit';
 import { Employee } from '../../employee';
+import { DataEmpl } from '../../employee';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { NgModule } from '@angular/core';
 
 import 'rxjs/add/operator/map';
 
@@ -12,13 +14,11 @@ export class EmployeeService {
     constructor(private http: HttpClient) { 
     }
 
-    fetchEmployeeArr(): Observable<Employee[]> {
-        return this.http.get<Employee[]>('localhost:3000/api/allEmployees');
+    fetchEmployeeArr(): Observable<DataEmpl> {
+        return this.http.get<DataEmpl>('http://localhost:4000');
     }
 
-    sendVisits(visArr: Visit): Observable<any>{
-        return this.http.post('api/visits',
-        visArr)
-        .map(res => console.log(res)); //mapping to text just to see the string response propagated to component subscribe
+    postVisit(vis: Visit): void{
+        this.http.post('http://localhost:4000/visits', vis);
     }
 }

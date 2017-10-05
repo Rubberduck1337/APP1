@@ -1,3 +1,7 @@
+export interface DataEmpl{
+    Employees: Employee[];
+}
+
 export interface Employee{
     id: number;
     firstName: string;
