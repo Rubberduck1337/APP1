@@ -1,7 +1,11 @@
 
-
+h1 {
+  color: #0a78b9;
+  font: bold 32px arial, helvetica, sans-serif;
+  text-align: center;
+}
 body{ 
-    background:url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/wild_oliva.png);
+    background:url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/wild_oliva.png);   
 }
 .centered {
   margin:50px auto;

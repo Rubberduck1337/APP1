@@ -1,10 +1,12 @@
+
+
 .main {
     border: 3px outset #4DA6DA;  
 }
 
 
 tr {
-  color: darkblue;
+  color: #0a78b9;
   text-transform: uppercase;
   border: 2px outset #4DA6DA;
   text-align: left;
@@ -12,41 +14,47 @@ tr {
 }
 
 .header {
-    color: darkblue;
+    color: #0a78b9;
     font: bold 16px arial, helvetica, sans-serif;
     text-align: center;
 }
 
 .center{
-    width:400px;
     margin:auto;
-    text-align:center;
-    color: darkblue;
+    text-align:left;
+    color: #0a78b9;
     font: bold 18px arial, helvetica, sans-serif;
-    background: #f0ffff;
-    border: 2px outset darkblue;
+    background: linear-gradient(#a5d6f3, #73bce7);
+    border: 2px outset #0a78b9;
+    border-radius: 25px;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px; 
+    width: 400px;
+   
 }
 input
 {
 background: #FAFAFA;
-border: 2px solid darkblue;
+border: 2px solid #0a78b9;
 text-align: left;
+width: 70%
 }
 
 .submit input
 {
 color: #000;
-background: darkblue;
+background: #0a78b9;
 border: 2px outset #d7b9c9
 }
 
 button {
     color: #fff;
-    background:#4DA6DA;
+    background:#269CE9;
     border: 2px outset #d7b9c9;
     margin-left: 3.5em;
     padding: 10px 30px;
     text-transform: uppercase;
     transition: .5s ease;
-    left: 49%;
+    width: 80%;
 }

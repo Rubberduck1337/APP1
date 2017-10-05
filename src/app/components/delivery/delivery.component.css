@@ -1,0 +1,20 @@
+
+.button.large{
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: #79c1f0;
+    border-color: #79c1f0;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+    background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    font: bold 13px arial, helvetica, sans-serif;
+  }
+  
+  .button.large:active{
+    top: 2px;
+  }
+  div {
+    text-align: center;
+    color: #0a78b9;
+    font: bold 18px arial, helvetica, sans-serif;
+  }

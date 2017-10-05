@@ -1,35 +1,34 @@
-
-<br>
-<br>
+<body>
 <br>
 
 <div class = "center">
 <br>
 
 <header><b> Please fill in your details below </b></header>
+
 <form #appointmentForm="ngForm" (ngSubmit)="onSubmit(appointmentForm)" novalidate>
         <table style="width:100%">
 
 <br>
-<tr>
-    <td><label>First Name: </label>  </td>
-    <td><input class= "table" name="first" ngModel required #first="ngModel"></td> 
+    <tr>
+        <td><label>First Name: </label>  </td>
+        <td><input class= "table" name="first" ngModel required #first="ngModel"></td> 
     
-</tr>
-<tr>
-    <td><label>Last Name:</label> </td>
-    <td><input class= "table" name="last" ngModel required last="true"></td> 
-</tr>
+    </tr>
+    <tr>
+        <td><label>Last Name:</label> </td>
+        <td><input class= "table" name="last" ngModel required last="true"></td> 
+    </tr>
     
     
-<tr>
-    <td><label>Email: </label> </td>
-    <td><input class= "table" type = "email" name="email" ngModel required email="true"></td> 
-</tr>
+    <tr>
+        <td><label>Email: </label> </td>
+        <td><input class= "table" type = "email" name="email" ngModel required email="true"></td> 
+    </tr>
 
-<tr>     
-<td> <label>Company: </label></td>
-<td><input class= "table" name="company" ngModel required company="true"></td> 
+    <tr>     
+        <td> <label>Company: </label></td>
+        <td><input class= "table" name="company" ngModel required company="true"></td> 
     </tr>
 
     <tr>
@@ -48,3 +47,4 @@
     <br><br>
 </form>
 </div>
+</body>
