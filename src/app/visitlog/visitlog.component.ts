@@ -24,13 +24,5 @@ export class VisitlogComponent implements OnInit {
   ngOnInit() {
   }
 
-  getLog(){
-    let log: string = '';
-    this.visits.forEach((elem) =>{
-      log += `${elem.firstName} ${elem.lastName} from ${elem.company} visited on ${elem.date} <br>Email: ${elem.email}<br><br>`;
-    })
-    document.getElementById("getLogButton").innerHTML = "update log";
-    document.getElementById("log").innerHTML= log;
-  }
 
 }
