@@ -39,6 +39,7 @@ export class AppointmentsComponent implements OnInit {
   onSubmit(f: NgForm) {
     if(!f.valid)
     {  
+      console.log(f.value);
       alert("Please fill in the fields correctly.")
       return;
     }
@@ -63,9 +64,9 @@ export class AppointmentsComponent implements OnInit {
     // redirect visitor from form to redirect page
     // and then back to the welcome page
     setTimeout(()=>{
-      this.router.navigateByUrl('/welcome');
+      this.router.navigateByUrl('visitor/welcome');
     }, 3000);
-    this.router.navigateByUrl('/redirect');
+    this.router.navigateByUrl('visitor/redirect');
   }
 
 }

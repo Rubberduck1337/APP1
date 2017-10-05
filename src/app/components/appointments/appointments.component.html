@@ -34,7 +34,8 @@
     <tr>
         <td><label>Person to Visit:</label></td>
         <td> <select name="toVisit" ngModel required toVisit="true">
-                <option *ngFor="let empl of employees; let idx = index;" value="idx"> {{ empl.firstName }} {{ empl.lastName }}</option>
+                <option>Who are you visiting?</option>
+                <option *ngFor="let empl of employees; let idx = index;" [ngValue]="empl"> {{ empl.firstName }} {{ empl.lastName }}</option>
               </select>
             </td> 
         </tr>

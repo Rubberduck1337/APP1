@@ -1,3 +1,5 @@
+import {Employee} from './employee';
+
 export interface Visit {
     id: number;
     date: Date;
@@ -5,5 +7,5 @@ export interface Visit {
     lastName: string;
     email: string;
     company: string;
-    personToVisit: string;
+    personToVisit: Employee;
 }
