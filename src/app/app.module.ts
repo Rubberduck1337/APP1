@@ -10,6 +10,8 @@ import { OtherComponent } from './components/other/other.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RedirectComponent } from './components/redirect/redirect.component';
+import { VisitlogComponent } from './visitlog/visitlog.component';
+import { VisitorcomponentComponent } from './visitorcomponent/visitorcomponent.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { RedirectComponent } from './components/redirect/redirect.component';
     AppointmentsComponent,
     DeliveryComponent,
     OtherComponent,
-    RedirectComponent
+    RedirectComponent,
+    VisitlogComponent,
+    VisitorcomponentComponent
   ],
   imports: [
     BrowserModule,
