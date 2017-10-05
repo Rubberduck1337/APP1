@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { RedirectComponent } from './components/redirect/redirect.component';
 import { VisitlogComponent } from './visitlog/visitlog.component';
 import { VisitorcomponentComponent } from './visitorcomponent/visitorcomponent.component';
+import { EmployeeService } from './components/appointments/employeesService';
+import { VisitorService } from './visitlog/visitorService';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +33,7 @@ import { VisitorcomponentComponent } from './visitorcomponent/visitorcomponent.c
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeeService, VisitorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

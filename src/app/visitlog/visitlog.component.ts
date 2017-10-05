@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
-import { EmployeeService } from '../components/appointments/employeesService';
+import { Visit } from '../visit';
+import { VisitorService } from './visitorService';
 
 @Component({
   selector: 'app-visitlog',
   templateUrl: './visitlog.component.html',
-  styleUrls: ['./visitlog.component.css'],
-  providers: [EmployeeService]
+  styleUrls: ['./visitlog.component.css']
 })
 export class VisitlogComponent implements OnInit {
-  employees: Employee[] = [];
+  visits: Visit[] = [];
 
-  constructor(private employeeService: EmployeeService) { 
+  constructor(private visitorService: VisitorService) { 
     this.fetch();
   }
 
   fetch() {
-    this.employeeService.fetchEmployeeArr().subscribe( (response) => {
-      this.employees = response.Employees;
+    this.visitorService.fetchEmployeeArr().subscribe( (response) => {
+      this.visits = response;
     });
   }
 
@@ -26,8 +26,8 @@ export class VisitlogComponent implements OnInit {
 
   getLog(){
     let log: string = '';
-    this.employees.forEach((elem) =>{
-      log += `id: ${elem.id}<br>First name: ${elem.firstName} <br>Last name: ${elem.lastName} <br>Email: ${elem.email}<br><br>`;
+    this.visits.forEach((elem) =>{
+      log += `${elem.firstName} ${elem.lastName} from ${elem.company} visited on ${elem.date} <br>Email: ${elem.email}<br><br>`;
     })
     document.getElementById("getLogButton").innerHTML = "update log";
     document.getElementById("log").innerHTML= log;

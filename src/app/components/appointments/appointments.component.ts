@@ -6,14 +6,14 @@ import { Employee } from '../../employee';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { EmployeeService } from './employeesService';
+import { VisitorService } from '../../visitlog/visitorService';
 import { Router } from '@angular/router';
 import { DataEmpl } from '../../employee';
 
 @Component({
   selector: 'app-appointments',
   templateUrl: './appointments.component.html',
-  styleUrls: ['./appointments.component.css'],
-  providers: [EmployeeService]
+  styleUrls: ['./appointments.component.css']
 })
 
 @Injectable()
@@ -21,7 +21,7 @@ export class AppointmentsComponent implements OnInit {
   visits: Visit[] = [];
   employees: Employee[] = [];
 
-  constructor(private router: Router, private employeeService: EmployeeService) {
+  constructor(private router: Router, private visitorService: VisitorService, private employeeService: EmployeeService) {
     this.fetch();
     console.log(this.employees);
   }
@@ -47,7 +47,6 @@ export class AppointmentsComponent implements OnInit {
     // Fill current visit with next id value, current date,
     // and information from form. Then push to array of visits
     let currVis: Visit = {
-      id: this.visits.length,
       date: new Date(),
       firstName: f.value.first,
       lastName: f.value.last,
@@ -58,7 +57,7 @@ export class AppointmentsComponent implements OnInit {
     this.visits.push(currVis);
     
     // post data of visit to server
-    this.employeeService.postVisit(currVis);
+    this.visitorService.postVisit(currVis);
     console.log(currVis);
 
     // redirect visitor from form to redirect page
