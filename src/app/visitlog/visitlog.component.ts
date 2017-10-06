@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
-import { Visit } from '../visit';
-import { VisitorService } from './visitorService';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-visitlog',
@@ -9,16 +9,27 @@ import { VisitorService } from './visitorService';
   styleUrls: ['./visitlog.component.css']
 })
 export class VisitlogComponent implements OnInit {
-  visits: Visit[] = [];
 
-  constructor(private visitorService: VisitorService) { 
-    this.fetch();
+  constructor(private router: Router) { 
   }
 
-  fetch() {
-    this.visitorService.fetchEmployeeArr().subscribe( (response) => {
-      this.visits = response;
-    });
+  // To handle the form:
+  onSubmit(f: NgForm) {
+    if(!f.valid)
+    {  
+      console.log(f.value);
+      alert("Please fill in the fields correctly.")
+      return;
+    }
+    
+    // Fill current visit with next id value, current date,
+    // and information from form. Then push to array of visits
+    
+    // redirect visitor from form to redirect page
+    // and then back to the welcome page
+    setTimeout(()=>{
+      this.router.navigateByUrl('visitlog/welcome');
+    }, 3000);
   }
 
   ngOnInit() {

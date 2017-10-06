@@ -1,0 +1,4 @@
+<ng-container *ngFor="let vis of visits">
+    {{vis.firstName}} {{vis.lastName}} ({{vis.email}}) from {{vis.company}} visited {{vis.personToVisit.firstName}} {{vis.personToVisit.lastName}} ({{vis.personToVisit.email}}) on {{vis.date | date: 'medium'}}.<br>
+</ng-container>
+  

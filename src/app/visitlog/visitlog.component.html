@@ -1,7 +1,34 @@
-<div class="center"> <h1> Visitor logs </h1>
-
-<ng-container *ngFor="let vis of visits">
-  {{vis.firstName}} {{vis.lastName}} ({{vis.email}}) from {{vis.company}} visited {{vis.personToVisit.firstName}} {{vis.personToVisit.lastName}} ({{vis.personToVisit.email}}) on {{vis.date | date: 'medium'}}.<br>
-</ng-container>
-
-</div>
+<div class = "center">
+    <br>
+    <header><b> Please fill in filters below </b></header>
+    <form #filterForm="ngForm" (ngSubmit)="onSubmit(filterForm)" novalidate>
+            <table style="width:100%">
+    <br>
+        <tr>
+            <td><label>First Name: </label>  </td>
+            <td><input class= "table" name="first" ngModel required #first="ngModel"></td> 
+        </tr>
+        <tr>
+            <td><label>Last Name:</label> </td>
+            <td><input class= "table" name="last" ngModel required last="true"></td> 
+        </tr>
+        <tr>     
+            <td> <label>Company: </label></td>
+            <td><input class= "table" name="company" ngModel required company="true"></td> 
+        </tr>
+        <tr>
+            <td><label>Person to Visit:</label></td>
+            <td> <select name="toVisit" ngModel required toVisit="true">
+                    <option>Who are you visiting?</option>
+                    <option *ngFor="let empl of employees; let idx = index;" [ngValue]="empl"> {{ empl.firstName }} {{ empl.lastName }}</option>
+                  </select>
+                </td> 
+            </tr>
+    <br>
+    <br>
+            
+        </table>
+    
+        <button> <b>Submit </b></button>
+        <br><br>
+    </form>

@@ -14,6 +14,8 @@ import { VisitlogComponent } from './visitlog/visitlog.component';
 import { VisitorcomponentComponent } from './visitorcomponent/visitorcomponent.component';
 import { EmployeeService } from './components/appointments/employeesService';
 import { VisitorService } from './visitlog/visitorService';
+import { ViewlogComponent } from './visitlog/viewlog/viewlog.component';
+import { VisitlogcomponentComponent } from './visitlogcomponent/visitlogcomponent.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { VisitorService } from './visitlog/visitorService';
     OtherComponent,
     RedirectComponent,
     VisitlogComponent,
-    VisitorcomponentComponent
+    VisitorcomponentComponent,
+    ViewlogComponent,
+    VisitlogcomponentComponent
   ],
   imports: [
     BrowserModule,

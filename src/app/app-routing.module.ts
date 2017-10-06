@@ -7,11 +7,18 @@ import { DeliveryComponent } from './components/delivery/delivery.component';
 import { OtherComponent } from './components/other/other.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
 import { VisitlogComponent } from './visitlog/visitlog.component'
+import { VisitlogcomponentComponent } from './visitlogcomponent/visitlogcomponent.component';
 import { VisitorcomponentComponent } from './visitorcomponent/visitorcomponent.component';
+import { ViewlogComponent } from './visitlog/viewlog/viewlog.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'visitor/welcome', pathMatch: 'full'},
-  { path: 'visitlog', component: VisitlogComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full'},
+  { path: 'visitlog', component: VisitlogcomponentComponent,
+  children: [
+    { path: '', redirectTo: 'welcome', pathMatch: 'full'},
+    { path: 'welcome', component: VisitlogComponent },
+    { path: 'viewlog', component: ViewlogComponent },
+  ] },
   { path: 'visitor', component: VisitorcomponentComponent,
   children: [
     { path: '', redirectTo: 'visitor/welcome', pathMatch: 'full'},
