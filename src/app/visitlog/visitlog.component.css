@@ -4,6 +4,7 @@ header {
   font-family: 'Avenir Next',sans-serif;
   font-size: 20px;
   color:#9b9a9a;
+  border-bottom: 2px solid #2bbed8;
 }
 
 body{ 
@@ -45,7 +46,6 @@ button {
 form {
   background-color: #f7f7f7;
   position: absolute;
-  bottom: 15%;
   right: 37%;
   width: 25%;
   border: 2px solid #9b9a9a;
