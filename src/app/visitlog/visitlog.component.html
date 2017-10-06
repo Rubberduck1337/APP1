@@ -1,6 +1,8 @@
+<header><b> Please fill in filters below </b></header>
 <div class = "center">
     <br>
-    <header><b> Please fill in filters below </b></header>
+
+    
     <form #filterForm="ngForm" (ngSubmit)="onSubmit(filterForm)" novalidate>
             <table style="width:100%">
     <br>
@@ -28,7 +30,9 @@
     <br>
             
         </table>
-    
+        <div id="wrapper">
         <button> <b>Submit </b></button>
+      </div>
         <br><br>
     </form>
+    

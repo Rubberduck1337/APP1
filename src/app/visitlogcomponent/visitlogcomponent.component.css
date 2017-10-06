@@ -1,0 +1,12 @@
+h1 {
+    font-family: 'Avenir Next',sans-serif;
+    position: center;
+    text-align: center;
+    color: #2bbed8;
+    
+}
+
+div {
+
+    border-bottom: 2px solid #2bbed8;
+}
